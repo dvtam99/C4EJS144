@@ -22,3 +22,44 @@
     top: 0;
     width: 100%;
   } */
+
+body {
+    margin: 0px;
+}
+
+.header {
+    background-color: coral;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+}
+
+.body {
+    background-color: darkcyan;
+    height: 2000px;
+
+}
+
+.nav{
+    padding: 0 80px;
+}
+.border{
+    border:  1px solid black
+}
+.logo{
+    width: calc(20% - 80px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.search-bar{
+    width: calc(80% - 80px);
+    height: 100%;
+
+}
+.text-logo{
+    font-size: 4em;
+    display: flex;
+    align-items: center;
+}

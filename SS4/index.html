@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +9,52 @@
     <link rel="stylesheet" href="./style.css">
 
 </head>
+
 <body>
 
-    <div>
 
-        <div class="head sticky"></div>
-        <div class="body"></div>
-        <div class="footer"></div>
-        
-
-
+    <div class="header nav">
+        <!-- <div> -->
+        <div class="logo border">
+            <div class="text-logo">MindX</div>
+        </div>
+        <div class="search-bar border">
+            <input type="text">
+        </div>
+        <!-- </div> -->
     </div>
-    
+    <div class="body nav">
+        this is
+        lkansdkas
+
+        <button onclick="myfunction()">Click me</button>
+
+        <img src="./images/stay-forcus.jpeg">
+
+
+        <input type="number" id="number1">
+        <input type="number" id="number2">
+        <button onclick="onClickCalculate()">Calculate</button>
+    </div>
+
+
+
 </body>
+
+<script>
+    function myfunction() {
+        console.log("you clicked btn")
+        alert("hello");
+    }  
+
+    function onClickCalculate() {
+        var value1 = document.getElementById("number1").value;
+        var value2 = document.getElementById("number2").value;
+        let sum = Number(value1)+Number(value2)
+        //   document.getElementById('messageID').value=value;
+        // console.log("you clicked btn")
+        alert(value1+" + "+value2 +" = "+sum);
+    }
+</script>
+
 </html>
