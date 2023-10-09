@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: rgb(245, 245, 245);
+            margin-bottom: 10px;
+        }
+
+        .item {
+            width: 50px;
+            height: 50px;
+            background-color: lightgreen;
+            border: 1px solid black;
+            font-size: 24px;
+        }
+
+        .warp {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div> Style display inline: </div>
+
+        <!-- external style  
+        internal style
+        inline style -->
+        <div class="inline border">item 1</div>
+        <div class="inline border" style="display: inline-block; width: 100px; height: 100px;">item 2</div>
+        <div class="inline border">item 3</div>
+        <div class="inline border">item 4</div>
+        <div class="inline border">item 5</div>
+        <div class="border"  style="display: block;">item 6</div>
+
+
+    </div>
+    <!--
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div> -->
+
+    <!-- <div class="container warp">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">13</div>
+    </div> -->
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+body {
+    margin: 0px;
+}
+
+.header {
+    height: 120px;
+    width: 100%;
+    background: linear-gradient(-180deg, #f53d2d, #f63);
+    color: white;
+}
+
+.container {
+    margin: 0 10%;
+}
+
+.top-h {
+    /* padding-top: 10px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.channel-top {
+    margin: 5px;
+    padding: 0px;
+    font-size: .8125rem;
+    display: flex;
+}
+
+.d-flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inline {
+    display: inline;
+}
+
+.t-icon{
+    display: inline;
+    margin-right: 5px;
+}
+.t-content{
+    display: inline;
+    margin-right: 5px;
+}
