@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //     console.log("==:", "1" == 1)
+        //     //    =>true
+        //     console.log("===:", "1" === 1)
+        //     //    =>false
+        //     let rawParams = "Thanh"
+
+        //     function printText() {
+
+        //         let params = "Hello: " + rawParams
+        //         console.log(rawParams + " - " + params)
+
+        //     }
+
+        //     // .env
+
+        //     printText()
+        //     // console.log(params)
+
+        //     let num = 10
+        //    //num = 10+1 => log (num=11) 
+        // //    num +=1 => log(11)
+        //     console.log(++num) //11  
+        //     // log (num=11) => num = 11+1 =>num=12
+        //     console.log(num++) //11
+        //     //log(num=12)
+        //     console.log(num) //12
+
+        //     let sex = "Male", group=1
+        //     console.log(sex, group);
+        //     if(group==3 && sex=="Male"){
+        //         console.log("trong nhom 3");
+        //     }else{
+        //         console.log("khong trong nhom 3");
+
+        //     }
+
+        //     group="3"
+        //     console.log(sex, group);
+        //     if(group===3 && sex=="Male"){
+        //         console.log("trong nhom 3");
+        //     }else{
+        //         console.log("khong trong nhom 3");
+        //     }
+
+        //     group=3
+        //     console.log(sex, group);
+        //     if(group==="3" || sex=="Male" || dsdd ||dsdd ||asdfd){
+        //         console.log("trong nhom 3");
+        //     }else{
+        //         console.log("khong trong nhom 3");
+        //     }
+        let value1, value2, operator
+        function onChangeInput1() {
+            value1 = document.querySelector("#value1").value
+            console.log(value1);
+        }
+        function onChangeInput2() {
+            value2 = document.querySelector("#value2").value
+            console.log(value2);
+        }
+
+        function onChangeInput3() {
+            operator = document.querySelector("#operator").value
+            console.log(operator);
+        }
+
+
+        // let onclickBtn=()=>{
+
+        // }
+        //+-*/**%
+        // https://www.w3schools.com/jsref/jsref_length_string.asp
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval
+        function onclickBtn() {
+            console.log(value1, value2, operator);
+            if (operator.length <= 2) {
+                if (operator == "+" || operator == "-" || operator == "*" || operator == "/" || operator == "%" || operator == "**") {
+                    let result = value1 + operator + value2
+                    result = result + " = "+ eval(result)
+
+                    // if(operator=="+"){
+                    //     result = value1+value2
+                    // }else if(operator=="-"){
+                    //     result = value1-value2
+                    // }
+                    console.log(result);
+                    confirm(result)
+                }else {
+                alert("invalid operator")
+            }
+
+
+
+            } else {
+                alert("invalid operator")
+            }
+
+
+        }
+
+
+    </script>
+
+    <div>
+        <div>
+            <label>Number 1: </label>
+            <input type="number" id="value1" onchange="onChangeInput1()" />
+        </div>
+        <div>
+            <label>Operator: </label>
+            <input type="text" id="operator" onchange="onChangeInput3()" />
+        </div>
+        <div>
+            <label>Number 2: </label>
+            <input type="number" id="value2" onchange="onChangeInput2()" />
+        </div>
+
+        <!-- <input  type="submit" value="calculate"> -->
+        <button onclick="onclickBtn()">calculateBtn</button>
+    </div>
+
+
+</body>
+
+</html>
