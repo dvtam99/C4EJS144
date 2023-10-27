@@ -20,7 +20,7 @@ myFunc2()
 myFunc3()
 
 
-const students = [
+let students = [
     {
         firstName: "Huy",
         lastName: "Nguyen",
@@ -105,8 +105,27 @@ function handleAddStudent() {
     renderStudentTable()
 
 
-    // alert("Hi "+ firstName)
 
+}
+
+function handleFilterStudent(){
+    let firstName = document.getElementById("firstName").value
+    let lastName = document.getElementById("lastName").value
+    let age = document.getElementById("age").value
+    let address = document.getElementById("address").value
+    let group = document.getElementById("group").value
+
+    // ve nha validate cac truong ko duoc de trong
+    // filler voi cac phan con lai
+    // students.push({ firstName, lastName, address, age, group })
+// debugger
+//     let foundStudent = students.filter(stu=>stu.age === Number(age))
+//     let foundStudent = students.filter(stu=>String(stu.age) === String(age))
+    let foundStudent = students.filter(stu=>stu.age == age)
+    console.log(foundStudent)
+    students = foundStudent
+
+    renderStudentTable()
 
 }
 
