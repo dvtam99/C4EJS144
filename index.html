@@ -8,11 +8,19 @@
     <meta name="author" content="Neon" />
     <meta name="keyword" content="FunFlow" />
     <title>C4EJS144</title>
-    
+  
   </head>
 
   <body>
-   
-    <a href="/SS7">SS7</a>
+   <div id="renderDiv"></div>
+    
   </body>
+  <script>
+    let renderDiv = document.getElementById("renderDiv")
+    for(let i =1; i <=10; i++){
+      let div = "<div> <a href='/SS"+i+"''>SS"+i+"</a></div>"
+      renderDiv.innerHTML+=div
+    }
+
+  </script>
 </html>

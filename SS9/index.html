@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link type="script" href="./index.js"/> -->
+    <script src="index.js"></script>
+    <script>
+        let users =[{
+            username:"haianh",
+            password:"1234",
+            address:"HD",
+            status:"active"
+        },
+        {
+            username:"tienthanh",
+            password:"123456",
+            address:"HN",
+            status:"active"
+        },
+        {
+            username:"q.huy",
+            password:"1xyz",
+            address:"HN",
+            status:"active"
+        }]
+
+        function login(username, password) {
+            let result =""
+            if(!username||!password){
+                result = "username or params it not empty"
+            }else{
+                let userValid = users.find((user)=>user.username === username)
+            if(!userValid || userValid.password !== password){
+                result = "username or password not match"
+            }else if(userValid.status === "active"){
+                result = "Login success"
+            }else{
+                result = "Login failed"
+            }
+            }
+            
+            alert(result)
+        }
+        login("q.huy","1xyz")
+
+    </script>
+</head>
+
+<body>
+    hi
+</body>
+
+</html>

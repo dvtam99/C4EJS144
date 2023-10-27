@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link type="script" href="./index.js"/> -->
+    <style>
+        table,
+        tr,
+        td {
+            border: 1px solid red;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div>
+        <b>First Name</b>
+        <input type="text" id="firstName" placeholder="enter firstName">
+    </div>
+    <div>
+        <b>Last Name</b>
+        <input type="text" id="lastName" placeholder="enter lastName">
+    </div>
+    <div>
+        <b>Age</b>
+        <input type="text" id="age" placeholder="enter age">
+    </div>
+    <div>
+        <b>Address</b>
+        <!-- <address></address> -->
+        <input type="text" id="address" placeholder="enter address">
+    </div>
+    <div>
+        <b>Group</b>
+        <input type="text" id="group" placeholder="enter group">
+    </div>
+    <div>
+        <button onclick="handleAddStudent()">Add student</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Idx</td>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Address</td>
+                <td>group</td>
+            </tr>
+        </thead>
+        <tbody id="tbStudent">
+
+        </tbody>
+    </table>
+</body>
+<script src="index.js">
+</script>
+
+<!-- <script>
+    class Student {
+        constructor(firstName, lastName, age, address, group, mon1 , monn) {
+            this.firstName = firstName
+            this.lastName = lastName
+            this.age = age
+            this.address = address
+            this.group = group
+        }
+
+        // getter
+        get getFullName() {
+            return this.lastName + this.firstName
+        }
+        get getFullName() {
+            return this.lastName + this.firstName
+        }
+
+        calcAverage =()=>{
+            // tisnh diem trung binh
+        }
+
+    }
+    let student = new Student("Tam", "Dao", "24", "HN", "3")
+    let student2 = new Student("Tam2", "Dao2", "24", "HN", "3")
+
+    let student3 = {
+        firstName: "Huy",
+        lastName: "Nguyen",
+        age: 19,
+        address: "Cau Dien",
+        group: "3",
+        // getFullName:()=>{
+        //     return firstName+lastName
+        // }
+    }
+    getFullName3 =()=>{
+        return student3.firstName + student3["lastName"]
+    }
+    console.log(student.getFullName, student2, student3)
+    console.log(getFullName3())
+
+</script> -->
+
+</html>
