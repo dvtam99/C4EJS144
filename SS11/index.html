@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link type="script" href="./index.js"/> -->
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 50px;
+        }
+    .container{
+        width: 400px;
+        /* border: 1px solid black; */
+    }
+    </style>
+
+
+</head>
+
+<body>
+   <div class="container">
+    <div class="clock">clock</div>
+  
+        <div class="input-time">
+            <input type="number" id="hour" placeholder="00" min="0" max="23" onchange="onHourChange(event)" width="2.8em"/>
+            <input type="number" id="minute" placeholder="00" min="0" max="59" onchange="onMinuteChange(event)" width="2.8em"/>
+        </div>
+        <div class="btn-add">
+            <button onclick="onClickBtnAdd()"> Add Alarm</button>
+    
+        </div>
+
+   
+    <div class="list-alarm" id="list-alarm"></div>
+   </div>
+</body>
+<script src="index.js">
+</script>
+
+
+</html>
