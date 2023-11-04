@@ -2,16 +2,7 @@
 //     renderClock()
 // }, 1000);
 
-
-// function renderClock() {
-//     let date = new Date()
-//     let hour = date.getHours()
-//     document.getElementById("hour").innerText = hour
-//     let minute = date.getMinutes()
-//     document.getElementById("minute").innerText = minute
-//     let second = date.getSeconds()
-//     document.getElementById("second").innerText = second
-// }
+let audio = new Audio("http://soundbible.com/grab.php?id=1252&type=mp3")
 
 
 // setTimeout(() => {
@@ -53,4 +44,35 @@ function onClickBtnAdd() {
     document.getElementById("list-alarm").innerHTML = temArr
 
 }
+
+function renderClock() {
+    let date = new Date()
+    let hour = date.getHours()
+    document.getElementById("cl-hour").innerText = hour
+    let minute = date.getMinutes()
+    document.getElementById("cl-minute").innerText = minute
+    let second = date.getSeconds()
+    document.getElementById("cl-second").innerText = second
+
+    listAlarms.forEach(el => {
+        if( el.hour == hour && el.minute == minute){
+            // audio.
+            audio.play()
+        }
+        
+    });
+}
+
+
+function playAudio(){
+
+    audio.play()
+}
+
+
+setInterval(function() {
+	renderClock()
+}, 1000) // khoang thoi gian ngan nhat de ham
+
+// 1000 ms = 1s
 
