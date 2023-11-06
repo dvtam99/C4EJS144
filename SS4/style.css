@@ -63,3 +63,7 @@ body {
     display: flex;
     align-items: center;
 }
+
+.d-flex{
+    display: flex;
+}
