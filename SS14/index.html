@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài 1</title>
+
+    <style>
+        .preview-image {
+            width: 225px;
+            height: 135px;
+        }
+        .d-flex{
+            display: flex;
+        }
+        .pl-15px{
+            padding-left: 15px;
+        } 
+        .pr-15p{
+            padding-right: 15px;
+
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .description{
+            font-size: 14px;
+        }
+        h3{
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <input type="number" id="inputA">
+    <input type="number" id="inputB">
+    <button onclick="SumPrimeNumber()">Enter</button>
+    <div id="resultSum"></div>
+
+
+    <div style="margin-top: 100px; border: 1px solid gray;">
+
+
+        <div class="d-flex">
+            <div>
+                <img class="preview-image"
+                    src="https://i1-kinhdoanh.vnecdn.net/2023/11/13/DJI05371690593879-1699865401-8809-1699865511.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=RM_jbGh_j-6v10L-94Xwpw">
+
+            </div>
+            <div class="pl-15px pr-15px">
+                <h3><a href="#">Doanh nghiệp bất động sản tiếp tục kêu khó tiếp cận vốn vay</a></h3>
+                <div>Doanh nghiệp bất động sản nêu nhiều vướng mắc liên quan thủ tục, hạn mức, lãi suất gây khó khăn khi vay
+                    vốn, song các nhà băng cho rằng vấn đề không nằm ở phía họ
+                </div>
+            </div>
+           
+        </div>
+        <div class="d-flex">
+            <div>
+                <img class="preview-image"
+                    src="https://i1-kinhdoanh.vnecdn.net/2023/11/13/DJI05371690593879-1699865401-8809-1699865511.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=RM_jbGh_j-6v10L-94Xwpw">
+
+            </div>
+            <div class="pl-15px pr-15px">
+                <h3><a href="#">Doanh nghiệp bất động sản tiếp tục kêu khó tiếp cận vốn vay</a></h3>
+                <div>Doanh nghiệp bất động sản nêu nhiều vướng mắc liên quan thủ tục, hạn mức, lãi suất gây khó khăn khi vay
+                    vốn, song các nhà băng cho rằng vấn đề không nằm ở phía họ
+                </div>
+            </div>
+           
+        </div>
+
+        <div class="d-flex">
+
+            <div class="d-flex">
+                <div>
+                    <img class="preview-image"
+                        src="https://i1-kinhdoanh.vnecdn.net/2023/11/13/DJI05371690593879-1699865401-8809-1699865511.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=RM_jbGh_j-6v10L-94Xwpw">
+    
+                </div>
+                <div class="pl-15px pr-15px">
+                    <h3><a href="#">Doanh nghiệp bất động sản tiếp tục kêu khó tiếp cận vốn vay</a></h3>
+                    <div>Doanh nghiệp bất động sản nêu nhiều vướng mắc liên quan thủ tục, hạn mức, lãi suất gây khó khăn khi vay
+                        vốn, song các nhà băng cho rằng vấn đề không nằm ở phía họ
+                    </div>
+                </div>
+               
+            </div>
+    
+    
+            <div class="d-flex">
+                <div>
+                    <img class="preview-image"
+                        src="https://i1-kinhdoanh.vnecdn.net/2023/11/13/DJI05371690593879-1699865401-8809-1699865511.jpg?w=380&h=228&q=100&dpr=1&fit=crop&s=RM_jbGh_j-6v10L-94Xwpw">
+    
+                </div>
+                <div class="pl-15px pr-15px">
+                    <h3><a href="#">Doanh nghiệp bất động sản tiếp tục kêu khó tiếp cận vốn vay</a></h3>
+                    <div class="description">
+                        Doanh nghiệp bất động sản nêu nhiều vướng mắc liên quan thủ tục, hạn mức, lãi suất gây khó khăn khi vay
+                        vốn, song các nhà băng cho rằng vấn đề không nằm ở phía họ
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+
+  
+
+
+    </div>
+
+    <script>
+        function isPrime(b) {
+
+            let prime = true;
+            if (b < 2) return prime = false;
+            let i = 2;
+            while (i < b) {
+                if (b % i == 0) {
+                    // prime = false;
+                    // break;
+                    return false
+                }
+                i++;
+            }
+            return true;
+        }
+        function SumPrimeNumber(a, b) {
+            var a = document.getElementById("inputA").value;
+            var b = document.getElementById("inputB").value;
+            a = Number(a)
+            b = Number(b)
+            // pa
+            if (a < 0 || b < 0) {
+                alert("a và b phải lớn hơn 0")
+            } else if (a > b) {
+                alert("a phải bé hơn b")
+            } else {
+
+                console.log(typeof (a), b)
+                let i = a + 1, isCurrentPrime = false, sumPrime = 0;
+                while (i < b) {
+
+                    if (isPrime(i)) sumPrime += i;
+                    ++i;
+                }
+
+                document.getElementById("resultSum").innerText = sumPrime
+                console.log(sumPrime);
+
+                document.location.replace("a.html")
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
